@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  options { timestamps(); ansiColor('xterm'); buildDiscarder(logRotator(numToKeepStr: '25')) }
+  options { timestamps(); buildDiscarder(logRotator(numToKeepStr: '25')) }
   parameters {
     choice(name: 'ACTION', choices: ['plan','apply','destroy'], description: 'Terraform action')
     string(name: 'AWS_REGION', defaultValue: 'us-east-1', description: 'AWS region')
