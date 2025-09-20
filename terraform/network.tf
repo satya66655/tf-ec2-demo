@@ -12,7 +12,7 @@ data "aws_subnets" "default" {
     values = [data.aws_vpc.default.id]
   }
 }
-
+/*
 resource "aws_security_group" "ec2_sg" {
   name        = "${var.instance_name}-sg"
   description = "Allow SSH (22) and HTTP (80) - demo"
@@ -45,7 +45,7 @@ resource "aws_security_group" "ec2_sg" {
     Name = "${var.instance_name}-sg"
   }
 }
-
+*/
 locals {
   default_subnet_id = data.aws_subnets.default.ids[0]
 }
