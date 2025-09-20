@@ -17,7 +17,7 @@ data "aws_ami" "al2023" {
 
 resource "aws_instance" "this" {
   ami                         = data.aws_ami.al2023.id
-  instance_type               = "t3.micro"
+  instance_type               = "t2.micro"
   subnet_id                   = local.default_subnet_id
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id]
   key_name                    = var.key_name
