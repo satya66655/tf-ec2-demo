@@ -12,6 +12,10 @@ data "aws_subnets" "default" {
     values = [data.aws_vpc.default.id]
   }
 }
+
+data "aws_security_group" "existing_sg"
+  id = "sg-0c20946163121270b"
+
 /*
 resource "aws_security_group" "ec2_sg" {
   name        = "${var.instance_name}-sg"
