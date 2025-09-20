@@ -4,7 +4,18 @@ variable "key_name" {
 }
 
 variable "instance_name" {
-  type    = string
-  default = "demo-ec2"
+  description = "Name tag for the EC2 instance"
+  type        = string
+  default     = "demo-ec2"
+}
+
+variable "subnet_id" {
+  description = "Existing subnet ID (e.g., subnet-xxxxxxxx)"
+  type        = string
+}
+
+variable "security_group_id" {
+  description = "Existing security group ID (e.g., sg-xxxxxxxx)"
+  type        = string
 }
 
