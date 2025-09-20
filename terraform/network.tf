@@ -13,8 +13,9 @@ data "aws_subnets" "default" {
   }
 }
 
-data "aws_security_group" "existing_sg"
+data "aws_security_group" "existing_sg" {
   id = "sg-0c20946163121270b"
+}
 
 /*
 resource "aws_security_group" "ec2_sg" {
