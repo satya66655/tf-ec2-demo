@@ -1,0 +1,19 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.tfstate.lock.info
+
+# Sensitive/user-specific
+terraform.tfvars
+*.pem
+
+# OS/editor
+.DS_Store
+*.swp
+.EOF
